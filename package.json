@@ -1,0 +1,50 @@
+{
+  "name": "app-api",
+  "description": "",
+  "version": "1.0.0",
+  "main": "handler.js",
+  "scripts": {
+    "test": "serverless-bundle test --passWithNoTests"
+  },
+  "author": "",
+  "license": "CC0-1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnomalyInnovations/serverless-nodejs-starter.git"
+  },
+  "devDependencies": {
+    "@shelf/jest-dynamodb": "^2.1.0",
+    "aws-sdk": "^2.752.0",
+    "aws-sdk-client-mock": "^0.5.6",
+    "serverless-associate-waf": "^1.2.1",
+    "serverless-bundle": "^3.1.0",
+    "serverless-dotenv-plugin": "^3.0.0",
+    "serverless-iam-helper": "file:../../plugins/serverless-iam-helper",
+    "serverless-offline": "^6.9.0",
+    "serverless-plugin-warmup": "^4.9.0",
+    "xstate": "^4.26.0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.43.0",
+    "@aws-sdk/lib-dynamodb": "^3.43.0",
+    "cmscommonlib": "file:../common",
+    "date-fns": "^2.16.1",
+    "joi": "^17.4.0",
+    "luxon": "^1.25.0",
+    "serverless-dynamodb-local": "^0.2.39",
+    "uuid": "^7.0.3"
+  },
+  "jest": {
+    "coverageReporters": [
+      "json",
+      [
+        "lcov",
+        {
+          "projectRoot": "../../"
+        }
+      ],
+      "text",
+      "clover"
+    ]
+  }
+}
